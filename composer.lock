@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eddiejibson/sido.git",
-                "reference": "1ee43a34f5809c286aa9efe6522ab1c638fa2412"
+                "reference": "8fb476002784415e9a47b1b08e00ed054086ca3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eddiejibson/sido/zipball/1ee43a34f5809c286aa9efe6522ab1c638fa2412",
-                "reference": "1ee43a34f5809c286aa9efe6522ab1c638fa2412",
+                "url": "https://api.github.com/repos/eddiejibson/sido/zipball/8fb476002784415e9a47b1b08e00ed054086ca3f",
+                "reference": "8fb476002784415e9a47b1b08e00ed054086ca3f",
                 "shasum": ""
             },
             "require": {
@@ -40,7 +40,7 @@
                 }
             ],
             "description": "Simplistic PHP unit testing library",
-            "time": "2019-05-22T15:34:19+00:00"
+            "time": "2019-05-22T16:45:41+00:00"
         }
     ],
     "packages-dev": [],

@@ -16,7 +16,6 @@ $sido->setTest("Array test");
 
 //Test array we will be using
 $array = ["hello" => true];
-
 //Add testcases to the test
 $sido->should(is_array($array), "Be an array");
-$sido->should(count($array) > 1, "Have a length greater than 0");
+$sido->should(count($array) > 0, "Have a length greater than 0");
