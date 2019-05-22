@@ -1,5 +1,4 @@
 <?php
-
 require "vendor/autoload.php"; //Require composer's autoload
 
 //Custom options can be set. All are optional.
