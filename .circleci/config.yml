@@ -10,8 +10,6 @@ jobs:
             - checkout
             - {run: {name: "Update composer", command: 'sudo composer self-update'}}
             - {restore_cache: {keys: ['composer-v1-{{ checksum "composer.lock" }}', composer-v1-]}}
-            - {run: 'npm install'}
-            - {run: 'npm install mocha-junit-reporter nyc'}
             - {save_cache: {paths: [vendor], key: 'composer-v1-{{ checksum "package.json" }}'}}
             - {run: 'mkdir reports'}
             - {run: {name: "Run test", command: 'php test.php', when: always}}
