@@ -1,0 +1,19 @@
+version: 2
+jobs:
+    build:
+        docker:
+            - {image: 'circleci/php:7.3.5'}
+            - {image: "circleci/php:7.3.5-cli"}
+            - {image: "circleci/php:7.3.5"}
+        working_directory: ~/sido
+        steps:
+            - checkout
+            - {run: {name: "Update composer", command: 'sudo composer self-update'}}
+            - {restore_cache: {keys: ['composer-v1-{{ checksum "composer.lock" }}', composer-v1-]}}
+            - {run: 'npm install'}
+            - {run: 'npm install mocha-junit-reporter nyc'}
+            - {save_cache: {paths: [vendor], key: 'composer-v1-{{ checksum "package.json" }}'}}
+            - {run: 'mkdir reports'}
+            - {run: {name: "Run test", command: 'php test.php', when: always}}
+            - {store_test_results: {path: reports}}
+            - {store_artifacts: {path: ./reports/report.xml}}
